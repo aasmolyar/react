@@ -1,4 +1,39 @@
-.App {
+.app-wrapper{
+  margin: 0 auto;
+  display: grid;
+  width: 1200px;
+  grid-template-areas: 
+  "header header"
+  "nav cont";
+
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 5px;
+}
+
+.header{
+  grid-area: header;
+  background-color: green;
+}
+
+.header img{
+  width: 120px;
+  background-color: red;
+}
+
+.nav{
+  grid-area: nav;
+  background-color: orange;
+  color: white;
+}
+
+.content{
+  grid-area: cont;
+  background-color: lightblue;
+}
+
+
+/* .App {
   text-align: center;
 }
 
@@ -36,3 +71,4 @@
     transform: rotate(360deg);
   }
 }
+ */
