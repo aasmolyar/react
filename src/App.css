@@ -11,28 +11,6 @@
   grid-gap: 5px;
 }
 
-.header{
-  grid-area: header;
-  background-color: green;
-}
-
-.header img{
-  width: 120px;
-  background-color: red;
-}
-
-.nav{
-  grid-area: nav;
-  background-color: orange;
-  color: white;
-}
-
-.content{
-  grid-area: cont;
-  background-color: lightblue;
-}
-
-
 /* .App {
   text-align: center;
 }
