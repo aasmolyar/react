@@ -2,7 +2,8 @@ import React from 'react';
 import classes from './Navbar.module.css';
 
 const Navbar = () => {
-    return  <nav className={classes.nav}>
+    return (
+      <nav className={classes.nav}>
 
     <div className={classes.item}>
       <a>Profile</a>
@@ -24,6 +25,7 @@ const Navbar = () => {
      <a>Settings</a>
     </div>
   </nav>
+    ) 
 }
 
 export default Navbar
