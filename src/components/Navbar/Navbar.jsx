@@ -24,6 +24,7 @@ const Navbar = () => {
     <div className={s.item}>
      <a href='/settings'>Settings</a>
     </div>
+    
   </nav>
     ) 
 }
