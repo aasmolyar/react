@@ -9,8 +9,10 @@ import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 
 import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
+import { render } from '@testing-library/react';
 
 const App = (props) => {
+
   return (
     <BrowserRouter>
       <div className='app-wrapper'>
@@ -18,8 +20,9 @@ const App = (props) => {
         <Navbar />
       <div  className='app-wrapper-content'>
 {      <Routes>
-        <Route path='/dialogs/' Component={Dialogs} /> 
-        <Route path='/profile' Component={Profile} /> 
+        <Route path='/dialogs/' Component = {() => <Dialogs />} /> 
+        <Route path='/profile' Component = {() => <Profile posts={props.posts}/>} /> 
+
         <Route path='/news' Component={News} /> 
         <Route path='/music' Component={Music} /> 
         <Route path='/settings' Component={Settings} /> 
