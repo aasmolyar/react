@@ -14,22 +14,21 @@ import { render } from '@testing-library/react';
 const App = (props) => {
 
   return (
-    <BrowserRouter>
+
       <div className='app-wrapper'>
         <Header />
         <Navbar />
       <div  className='app-wrapper-content'>
 {      <Routes>
-        <Route path='/dialogs/' Component = {() => <Dialogs />} /> 
-        <Route path='/profile' Component = {() => <Profile posts={props.posts}/>} /> 
-
+        <Route path='/dialogs/' Component = {() => <Dialogs state={props.state.dialogsPage} />} /> 
+        <Route path='/profile' Component = {() => <Profile state={props.state.profilePage} addPost={props.addPost}/>} /> 
         <Route path='/news' Component={News} /> 
         <Route path='/music' Component={Music} /> 
         <Route path='/settings' Component={Settings} /> 
       </Routes>}
       </div>
       </div>
-    </BrowserRouter>
+
   )
 }
 
