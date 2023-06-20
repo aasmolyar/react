@@ -2,30 +2,42 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogsItem';
 import Message from './Message/Message';
+import UserPhoto from './DialogItem/UserPhoto';
 
 const Dialogs = (props) => {
 
-    let dialogs = [
-        {id: 1, name: 'Dusha'},
-        {id: 2, name: 'Den'},
-    ]
+    let dialogsElements = props.state.dialogs.map((d) => <DialogItem name={d.name} id={d.id} />);
+    let messagesElements = props.state.messages.map((m) => <Message message={m.message} />);
+    let UserPhotoElements = props.state.photo.map((photo) => <UserPhoto photo={photo.photo} id={photo.id}/>);
 
-    let messages = [
-        {id: 1, message: 'Hi'},
-        {id: 2, message: 'How'},
-    ]
+    let newMessageElement = React.createRef();
 
-    let dialogsElements = dialogs.map((d) => <DialogItem name={d.name} id={d.id} />)
-    let messagesElements = messages.map((m) => <Message message={m.message} />) 
+    let addMessage = () => {
+        let textMessage = newMessageElement.current.value;
+        alert(textMessage);
+    }
 
     return (
         <div className={s.dialogs}>
+
+            <div className=''>
+                {UserPhotoElements}
+            </div>
+
             <div className={s.dialogsItems}>
                 {dialogsElements}
             </div>
 
             <div className={s.messages}>
                 {messagesElements}
+            </div>
+
+            <div>
+                <textArea ref = {newMessageElement}></textArea>
+            </div>
+
+            <div>
+                <button onClick = {addMessage}>Sent message</button>
             </div>
         </div>
     )

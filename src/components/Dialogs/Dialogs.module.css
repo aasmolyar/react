@@ -5,6 +5,18 @@
 
 .dialogsItems {
     padding: 10px;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        'i n'
+        'i n'
+}
+
+.dialogsItems img {
+    grid-area: i;
 }
 
 .dialogsItems .active {
