@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile";
-import Dialogs from "./components/Dialogs/Dialogs";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
@@ -21,16 +21,11 @@ const App = (props) => {
           <Routes>
             <Route
               path="/profile"
-              Component={() => (
-                <Profile
-                  profilePage={props.state.profilePage}
-                  dispatch={props.dispatch}
-                />
-              )}
+              Component={() => <Profile store={props.store} />}
             />
             <Route
               path="/dialogs"
-              Component={() => <Dialogs store={props.store} />}
+              Component={() => <DialogsContainer store={props.store} />}
             />
             <Route path="/news" Component={News} />
             <Route path="/music" Component={Music} />
