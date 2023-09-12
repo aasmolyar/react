@@ -3,23 +3,26 @@ import axios from 'axios';
 import styles from './users.module.css';
 import UserPhoto from '../../assets/images/userPhoto.png';
 
-class Users extends React.Component {
-
-    constructor(props) {
-        super(props);
-
-            axios.get('https://social-network.samuraijs.com/api/1.0/users')
+class Users extends React.Component { 
+    componentDidMount() {
+        axios.get('https://social-network.samuraijs.com/api/1.0/users')
                 .then(responce => {
-                    this.props.setUsers(responce.data.items)
+                    this.props.setUsers(responce.data.items);
                 });
     }
 
-    getUsers = () => {
-        
-        }
-
     render() {
+
+        let pagesCount = Math.cell(this.props.totalUsersCount / this.props.pageSize);
+
       return <div>
+        <div>
+            <span>1</span>
+            <span className={styles.selectedPage}>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+        </div>
         {
             this.props.users.map(u => <div key={u.id}>
                 <span>
