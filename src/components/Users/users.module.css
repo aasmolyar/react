@@ -6,3 +6,11 @@
 .selectedPage {
     font-weight: bold;
 }
+
+div > span {
+    padding: 2px;
+}
+
+.pages {
+    cursor: n-resize
+}
