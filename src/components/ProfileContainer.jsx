@@ -7,7 +7,7 @@ import {setUserProfile} from '../components/redux/profile-reducer';
 class ProfileContainer extends React.Component {
 
 componentDidMount () {
-  axios.get(`https://social-network.samuraijs.com/api/1.0/profile?2`)
+  axios.get(`https://social-network.samuraijs.com/api/1.0/profile/2`)
   .then(responce => {
       this.props.setUserProfile(responce.data);
   });    
@@ -16,7 +16,7 @@ componentDidMount () {
   render() {
     return (
       <div>
-        <Profile {...this.props} profile={this.props.profile} />
+        <Profile {...this.props} />
       </div>
     )
   }
