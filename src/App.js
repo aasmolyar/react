@@ -20,7 +20,7 @@ const App = (props) => {
         {
           <Routes>
             <Route
-              path="/profile"
+              path="/profile/:userId?"
               Component={() => <ProfileContainer store={props.store} />}
             />
             <Route
