@@ -11,6 +11,7 @@ import HeaderContainer from "../src/components/Header/HeaderContainer";
 
 import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
 import UsersContainer from "./components/Users/UsersContainer";
+import LoginPage from "./components/Login/Login";
 
 const App = (props) => {
   return (
@@ -29,6 +30,7 @@ const App = (props) => {
               Component={() => <DialogsContainer store={props.store} />}
             />
             <Route path="/users" Component={() => <UsersContainer />} />
+            <Route path="/login" Component={() => <LoginPage />} />
             <Route path="/news" Component={News} />
             <Route path="/music" Component={Music} />
             <Route path="/settings" Component={Settings} />

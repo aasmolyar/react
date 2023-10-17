@@ -1,6 +1,6 @@
 .usersPhoto {
-    width: 300px;
-    height: 200px;
+    width: 100px;
+    height: 75px;
 }
 
 .selectedPage {
@@ -12,5 +12,6 @@ div > span {
 }
 
 .pages {
-    cursor: n-resize
+    cursor: pointer
 }
+
