@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import ProfileContainer from "./components/ProfileContainer";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
@@ -9,7 +8,7 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import HeaderContainer from "../src/components/Header/HeaderContainer";
 
-import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import UsersContainer from "./components/Users/UsersContainer";
 import LoginPage from "./components/Login/Login";
 
