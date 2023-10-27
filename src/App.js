@@ -7,10 +7,9 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import HeaderContainer from "../src/components/Header/HeaderContainer";
-
 import { Routes, Route } from "react-router-dom";
 import UsersContainer from "./components/Users/UsersContainer";
-import LoginPage from "./components/Login/Login";
+import Login from "./components/Login/Login";
 
 const App = (props) => {
   return (
@@ -29,7 +28,7 @@ const App = (props) => {
               Component={() => <DialogsContainer store={props.store} />}
             />
             <Route path="/users" Component={() => <UsersContainer />} />
-            <Route path="/login" Component={() => <LoginPage />} />
+            <Route path="/login" Component={() => <Login />} />
             <Route path="/news" Component={News} />
             <Route path="/music" Component={Music} />
             <Route path="/settings" Component={Settings} />
