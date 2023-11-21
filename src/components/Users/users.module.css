@@ -3,15 +3,5 @@
     height: 75px;
 }
 
-.selectedPage {
-    font-weight: bold;
-}
 
-div > span {
-    padding: 2px;
-}
-
-.pages {
-    cursor: pointer
-}
 
